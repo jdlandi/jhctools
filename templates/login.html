@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Financial Learning</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row d-flex justify-content-center mt-5">
+        <!-- Form -->
+        <div style = "background-color: #FFF3D6" class = "col-lg-6 col-md-8 col-sm-12 rounded text-center shadow p-5">
+          
+            <img src="/static/images/logo.png" alt="Logo" width="150" class="d-inline-block">
+          <p></p>
+          <h1 style = "color: #14213D">Login/Signup</h1>
+          <p> {{ error }}</p>
+          <form method="post" action="/signup">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" name="username">
+              <label for="floatingInput">Username</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingInput" name="password">
+                <label for="floatingInput">Password</label>
+            </div>
+            <!-- <button type="submit" class="btn btn-primary">Signup</button> -->
+            <input type="submit" name = "action" value = "Login" class="btn btn-primary">
+
+            <input type="submit" name = "action" value = "Signup" class="btn btn-primary">
+
+          </form>
+          <!-- End of Form -->
+      </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+  </body>
+</html>
