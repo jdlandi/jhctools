@@ -254,6 +254,11 @@ def save_flashcards():
 
 # HANDLE POST AND GET for login
 @app.route("/")
+def to_main():
+    return redirect("https://landihvac.net", code=301)
+
+
+
 @app.route("/signup", methods=["POST", "GET"])
 def signup():
     if (request.method == "POST"):
@@ -276,7 +281,8 @@ def signup():
             if not datatypes.password_check(pwd, profile['password']):
                 return render_template("login.html", error="Incorrect password")
         # verify
-        response = redirect("/home")  # make_response()
+        #response = redirect("/home")  # make_response()
+        response = redirect("https://landihvac.net", code=301)
         response.set_cookie("username", request.form["username"])
         response.set_cookie("password", request.form["password"])
 
@@ -295,10 +301,10 @@ def shutdown_server():
     func()
 
 
-@app.route('/shutdown', methods=['POST'])
-def shutdown():
-    shutdown_server()
-    return 'Server shutting down...'
+#@app.route('/shutdown', methods=['POST'])
+#def shutdown():
+#    shutdown_server()
+#    return 'Server shutting down...'
 
 
 # # CLEAR OUT THE EVENTS
